@@ -1,3 +1,5 @@
+inherit_from: .rubocop_todo.yml
+
 # Omakase Ruby styling for Rails
 inherit_gem: { rubocop-rails-omakase: rubocop.yml }
 
@@ -6,3 +8,46 @@ inherit_gem: { rubocop-rails-omakase: rubocop.yml }
 # # Use `[a, [b, c]]` not `[ a, [ b, c ] ]`
 # Layout/SpaceInsideArrayLiteralBrackets:
 #   Enabled: false
+
+plugins:
+  - rubocop-factory_bot
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  DisplayCopNames: true
+  NewCops: enable
+  UseCache: true
+  TargetRubyVersion: 3.4
+  TargetRailsVersion: 8.1
+  Exclude:
+    - bin/**/*
+    - config/routes.rb
+    - config/environments/*
+    - config/initializers/*
+    - db/migrate/*
+    - db/schema.rb
+    - lib/tasks/**/*
+    - vendor/**/*
+
+Layout/LineLength:
+  Max: 100
+
+Metrics/AbcSize:
+  Max: 20
+
+Style/AccessorGrouping:
+  Enabled: true
+
+Style/CombinableLoops:
+  Enabled: true
+
+Style/FetchEnvVar:
+  Enabled: true
+
+Style/HashLikeCase:
+  Enabled: true
+
+Style/HashSyntax:
+  EnforcedStyle: ruby19

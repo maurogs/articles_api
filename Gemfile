@@ -47,4 +47,25 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  # Rspec testing framework
+  gem 'rspec-rails', '~> 8.0', '>= 8.0.2'
+
+  # Ruby, Rails, RSpec and factory_bot code style checking and code formatting tool
+  gem 'rubocop', '~> 1.84', '>= 1.84.2'
+  gem 'rubocop-rails', '~> 2.34', '>= 2.34.3'
+  gem 'rubocop-rspec', '~> 3.9'
+  gem 'rubocop-factory_bot', '~> 2.28'
+
+  # Performance optimization analysis
+  gem 'rubocop-performance', '~> 1.26', '>= 1.26.1'
+
+  # Fixtures replacement with easy definition syntax
+  gem 'factory_bot_rails', '~> 6.5', '>= 6.5.1'
 end
+
+group :test do
+  # Simple One-Liner Tests for Rspec
+  gem 'shoulda-matchers', '~> 7.0', '>= 7.0.1'
+end
+
