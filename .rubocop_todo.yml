@@ -21,3 +21,6 @@ Layout/TrailingEmptyLines:
 Style/StringLiterals:
   Exclude:
     - 'Gemfile'
+
+RSpec/ExampleLength:
+  Max: 369

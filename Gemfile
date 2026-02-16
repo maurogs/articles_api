@@ -35,9 +35,12 @@ gem "image_processing", "~> 1.2"
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
 # gem "rack-cors"
 
+# JSON serialization library
+gem 'jsonapi-serializer', '~> 2.2'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+  gem "byebug", platforms: %i[ mri windows ]
 
   # Audits gems for known security defects (use config/bundler-audit.yml to ignore issues)
   gem "bundler-audit", require: false
@@ -62,6 +65,9 @@ group :development, :test do
 
   # Fixtures replacement with easy definition syntax
   gem 'factory_bot_rails', '~> 6.5', '>= 6.5.1'
+
+  # Fake data generator
+  gem 'faker', '~> 3.6'
 end
 
 group :test do

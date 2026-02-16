@@ -23,7 +23,7 @@ require 'rspec/rails'
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
 # require only the support files necessary.
 #
-# Rails.root.glob('spec/support/**/*.rb').sort_by(&:to_s).each { |f| require f }
+Rails.root.glob('spec/support/**/*.rb').sort_by(&:to_s).each { |f| require f }
 
 # Ensures that the test database schema matches the current schema file.
 # If there are pending migrations it will invoke `db:test:prepare` to
@@ -43,6 +43,11 @@ Shoulda::Matchers.configure do |config|
 end
 
 RSpec.configure do |config|
+  # Factorybot config
+  config.include FactoryBot::Syntax::Methods
+  # Include helpers from /support folder
+  config.include RequestSpecHelper, type: :request
+  config.include RequestSpecHelper, type: :model
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_paths = [
     Rails.root.join('spec/fixtures')
