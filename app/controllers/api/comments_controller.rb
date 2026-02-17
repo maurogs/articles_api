@@ -2,6 +2,10 @@ module Api
   class CommentsController < ApiController
     before_action :set_comment, only: :show
 
+    def index
+      render_serialized_json Comment.all
+    end
+
     def show
       render_serialized_json @comment
     end

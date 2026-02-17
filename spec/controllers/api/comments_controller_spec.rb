@@ -1,6 +1,35 @@
 describe Api::CommentsController, type: :request do
   let!(:article) { create(:article) }
 
+  describe '#index' do
+    let!(:comment) { create(:comment) }
+
+    let(:query) do
+      get "/api/comments"
+    end
+
+    before { query }
+
+    it 'returns status code 200' do
+      expect(response).to have_http_status(:ok)
+    end
+
+    it 'returns the serialized comments' do
+      expect(rendered_json['data'].map { |comment| comment['id'].to_i }).to \
+        contain_exactly(comment.id)
+    end
+
+    it 'returns the selected comments attributes' do
+      expect(rendered_json['data'].first['attributes'].keys)
+        .to eq(%w[authorName body createdAt])
+    end
+
+    it 'returns the comments relationships' do
+      expect(rendered_json['data'].first['relationships'].keys)
+        .to eq(%w[article])
+    end
+  end
+
   describe '#show' do
     let!(:comment) { create(:comment) }
 

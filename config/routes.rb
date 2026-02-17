@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   # root "posts#index"
   
   namespace :api do
-    resources :articles, only: %i[index create]
-    resources :comments, only: %i[show create]
+    resources :articles, only: [:index, :create] do
+      resources :comments, only: :index, module: :articles
+    end
+    resources :comments, only: %i[index show create]
   end
 end

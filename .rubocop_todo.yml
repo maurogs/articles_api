@@ -24,3 +24,6 @@ Style/StringLiterals:
 
 RSpec/ExampleLength:
   Max: 369
+
+RSpec/LetSetup:
+  Enabled: false
