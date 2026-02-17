@@ -33,3 +33,5 @@ comments = Article.pluck(:id).flat_map do |article_id|
 end
 
 Comment.insert_all(comments)
+
+Article.find_each { |article| Article.reset_counters(article.id, :comments) }

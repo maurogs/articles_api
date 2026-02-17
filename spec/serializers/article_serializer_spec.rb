@@ -11,7 +11,9 @@ describe ArticleSerializer do
       attributes: {
         title: article.title,
         authorName: article.author_name,
-        body: article.body
+        body: article.body,
+        commentsCount: 1,
+        createdAt: article.created_at
       },
       relationships: {
         comments: { data: [ { id: comment.id.to_s, type: :comment } ] }

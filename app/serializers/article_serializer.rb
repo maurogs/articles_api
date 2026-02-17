@@ -5,5 +5,5 @@ class ArticleSerializer < ApplicationSerializer
 
   has_many :comments, serializer: ::CommentSerializer
 
-  attributes :title, :author_name, :body
+  attributes :title, :author_name, :body, :comments_count, :created_at
 end

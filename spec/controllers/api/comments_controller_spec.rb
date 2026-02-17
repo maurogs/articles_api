@@ -19,7 +19,7 @@ describe Api::CommentsController, type: :request do
 
     it 'returns the selected comment attributes' do
       expect(rendered_json['data']['attributes'].keys)
-        .to eq(%w[body authorName])
+        .to eq(%w[authorName body createdAt])
     end
 
     it 'returns the comment relationships' do

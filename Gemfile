@@ -39,7 +39,7 @@ gem "image_processing", "~> 1.2"
 gem 'jsonapi-serializer', '~> 2.2'
 
 # Customizable paginator library
-gem 'kaminari', '~> 0.17.0'
+gem 'kaminari', '~> 1.2', '>= 1.2.2'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

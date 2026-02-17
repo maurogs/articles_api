@@ -10,7 +10,8 @@ describe CommentSerializer do
       type: :comment,
       attributes: {
         authorName: comment.author_name,
-        body: comment.body
+        body: comment.body,
+        createdAt: comment.created_at
       },
       relationships: {
         article: { data: { id: article.id.to_s, type: :article } }

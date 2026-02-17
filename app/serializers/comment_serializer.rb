@@ -5,5 +5,5 @@ class CommentSerializer < ApplicationSerializer
 
   belongs_to :article, serializer: ::ArticleSerializer
 
-  attributes :body, :author_name
+  attributes :author_name, :body, :created_at
 end

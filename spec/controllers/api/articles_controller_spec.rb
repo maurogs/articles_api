@@ -19,7 +19,7 @@ describe Api::ArticlesController, type: :request do
 
     it 'returns the selected article attributes' do
       expect(rendered_json['data'].first['attributes'].keys)
-        .to eq(%w[title authorName body])
+        .to eq(%w[title authorName body commentsCount createdAt])
     end
 
     it 'returns the article relationships' do
