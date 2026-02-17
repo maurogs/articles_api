@@ -38,6 +38,9 @@ gem "image_processing", "~> 1.2"
 # JSON serialization library
 gem 'jsonapi-serializer', '~> 2.2'
 
+# Customizable paginator library
+gem 'kaminari', '~> 0.17.0'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "byebug", platforms: %i[ mri windows ]
