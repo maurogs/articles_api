@@ -55,7 +55,7 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   # Rspec testing framework
-  gem 'rspec-rails', '~> 8.0', '>= 8.0.2'
+  gem 'rspec-rails', '~> 8.0'
 
   # Ruby, Rails, RSpec and factory_bot code style checking and code formatting tool
   gem 'rubocop', '~> 1.84', '>= 1.84.2'
