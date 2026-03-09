@@ -58,7 +58,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 8.0', '>= 8.0.2'
 
   # Ruby, Rails, RSpec and factory_bot code style checking and code formatting tool
-  gem 'rubocop', '~> 1.84', '>= 1.84.2'
+  gem 'rubocop', '~> 1.85'
   gem 'rubocop-rails', '~> 2.34', '>= 2.34.3'
   gem 'rubocop-rspec', '~> 3.9'
   gem 'rubocop-factory_bot', '~> 2.28'
