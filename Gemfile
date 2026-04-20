@@ -70,7 +70,7 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 6.5', '>= 6.5.1'
 
   # Fake data generator
-  gem 'faker', '~> 3.6'
+  gem 'faker', '~> 3.8'
 end
 
 group :test do
